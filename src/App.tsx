@@ -1,5 +1,6 @@
 import { Canvas } from 'react-three-fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
+import { Physics } from '@react-three/cannon'
 import './App.css'
 
 import Box from './components/Box'
@@ -13,8 +14,10 @@ function App() {
       <Stars />
       <ambientLight intensity={0.5} />
       <spotLight position={[10, 15, 10]} angle={0.3} />
-      <Box />
-      <Plane />
+      <Physics>
+        <Box />
+        <Plane />
+      </Physics>
     </Canvas>
   )
 }

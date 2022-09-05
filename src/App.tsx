@@ -1,4 +1,5 @@
 import { Canvas } from 'react-three-fiber'
+import { OrbitControls } from '@react-three/drei'
 import './App.css'
 
 import Box from './components/Box'
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
       <h1>React 3D</h1>
       <Canvas>
-        <Box />  
+        <OrbitControls />
+        <Box />
       </Canvas>
     </div>
   )
